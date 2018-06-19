@@ -1,0 +1,11 @@
+{
+	"miniprogramRoot": "./miniprogram",
+	"pluginRoot": "./plugin",
+	"compileType": "plugin",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wx63442a92b35ad4ed",
+	"projectname": "Xiao_Cheng_Xu8_chajian_KaiFa1",
+	"condition": {}
+}
