@@ -7,5 +7,31 @@
 	},
 	"appid": "wx63442a92b35ad4ed",
 	"projectname": "Xiao_Cheng_Xu8_chajian_KaiFa1",
-	"condition": {}
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "product",
+					"pathName": "pages/productDetailed/index"
+				}
+			]
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": []
+		}
+	}
 }

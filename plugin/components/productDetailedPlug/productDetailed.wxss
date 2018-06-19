@@ -1,0 +1,75 @@
+page{
+  background-color: #fff;
+}
+.content-column{
+  display: flex;  
+  flex-direction: column;  
+}
+.content-row{  
+  display: flex;  
+  flex-direction: row;  
+}
+/* 产品名称与产品详情的分界线 */
+.wrap-productName{
+  border: 1rpx solid #dddddd;
+}
+/* 产品名称 */
+.header-productName{
+  margin-top: 70rpx;
+  width: 88%;
+  margin-left: 44rpx;
+  margin-bottom: 26rpx;
+}
+/* 产品名称前的实心圆样式 */
+.content-circle{
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50rpx;
+  background-color: #5daef8;
+  margin-top: 18rpx;
+}
+/* 产品的名称 */
+.content-productName{
+  font-Family: "PingFangSC-Regular";
+	font-Size: 32rpx;
+	color: #4b4b4b;
+}
+/* 产品信息-图片以及详细介绍 */
+.wrap-productInfo{
+  margin-top: 23rpx;
+  width: 88%;
+  margin-left: 44rpx;
+}
+/* 图片名称 */
+.content-imgName{
+  font-Family: "PingFangSC-Regular";
+	font-Size: 32rpx;
+	color: #4b4b4b;
+}
+/* 产品图片 */
+.content-imgPicture{
+  width: 100%;
+  height: 362rpx;
+  border: 1rpx solid red;
+  margin-top: 24rpx;
+  margin-bottom: 23rpx;
+}
+/* 产品详细介绍 */
+.content-productIntriduce{
+  font-Family: "PingFangSC-Regular";
+	font-Size: 32rpx;
+	color: #aaaaaa;
+}
+/*地老天荒售后电话  */
+.dlth{
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+  font-size: 30rpx;
+  padding: 10rpx 0 20rpx 0;
+}
+.dlth_logo{
+  width: 400rpx;
+  margin-bottom: 10rpx;
+  border: 1rpx solid red;
+}

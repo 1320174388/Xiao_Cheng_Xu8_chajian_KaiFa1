@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "productDetailed": "plugin://myPlugin/productDetailed"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "详情页面"
+}
