@@ -1,6 +1,6 @@
 {
   "publicComponents": {
-    "list": "components/list/list"
+    "indexPlugList":"components/indexPlugList/indexPlugList"
   },
   "main": "index.js"
 }

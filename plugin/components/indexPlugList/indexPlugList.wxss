@@ -1,0 +1,94 @@
+/* plugin/components/indexPlugList/indexPlugList.wxss */
+page{
+    background: #F6F6F6;
+}
+.line-gray{
+    width: 100%;
+    height: 28rpx;
+    background: #F6F6F6;
+}
+.image-show-wrap{
+    width: 100%;
+    position: relative;
+    padding-bottom: 24rpx;
+    background: #ffffff;
+}
+.detail{
+    width: 60rpx;
+    height: 15rpx;
+    font-size: 100rpx;
+    color: #D8D8D8;
+    position: absolute;
+    left: 640rpx;
+    top: -24rpx;
+}
+.list-content-wrap{
+    font-size: 32rpx;
+}
+.showName{
+    width: 70%;
+    height: 95rpx;
+    line-height: 95rpx;
+    box-sizing: border-box;
+    padding-left: 40rpx;
+    overflow: hidden;
+}
+.product-description{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24rpx 0 24rpx 40rpx;
+    border-top:1px solid #EFEFEF;
+
+}
+.image-description{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24rpx 40rpx;
+    color:#aaaaaa;
+}
+.operation-wrap{
+    width: 100%;
+    padding-left: 515rpx;
+    font-size: 24rpx;
+    display: flex;
+    height: 40rpx;
+}
+
+.edit-image{
+    width: 35rpx;
+    height: 35rpx;
+}
+.remove-image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.imageHide-wrap{
+    width: 100%;
+    background: #ffffff;
+    position: relative;
+}
+.imageHide-title{
+    padding: 24rpx 0 24rpx 40rpx;
+    font-size: 32rpx;
+    width: 80%;
+    overflow: hidden;
+}
+.image-small-title{
+    padding: 0 0 24rpx 40rpx;
+    font-size: 24rpx;
+
+}
+.fill{
+    width: 100%;
+    height: 100rpx;
+}
+.add{
+    width: 100%;
+    height: 100rpx;
+    background: #5DAEF8;
+    color: #ffffff;
+    line-height: 100rpx;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
