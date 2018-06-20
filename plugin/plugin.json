@@ -1,7 +1,7 @@
 {
   "publicComponents": {
-    "list": "components/list/list",
-    "productDetailed": "components/productDetailedPlug/productDetailed"
+    "productDetailed": "components/productDetailedPlug/productDetailed",
+    "indexPlugList":"components/indexPlugList/indexPlugList"
   },
   "main": "index.js"
 }

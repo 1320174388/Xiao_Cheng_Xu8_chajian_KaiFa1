@@ -1,0 +1,69 @@
+<!--plugin/components/indexPlugList/indexPlugList.wxml-->
+<view class='wrap'>
+    <!--列表有图片时  -->
+    <view wx:if="{{imageIsShow}}" class='image-show-wrap'  wx:for="{{list}}" wx:for-item="listItem" wx:key="" wx:for-index="listIndex">
+        <!--过渡线  -->
+        <view class='line-gray'></view>
+        <!--详情点  -->
+        <view class='detail'>...</view>
+        <!--正文内容  -->
+        <view class='list-content-wrap'>
+            <view wx:for="{{listItem}}" wx:for-item="objItem" wx:key="" wx:for-index="objIndex">
+                <view wx:for="{{typeList}}" wx:for-item="typeItem" wx:key="" wx:for-index="typeIndex">
+                    <view wx:if="{{typeItem=='title'&&typeIndex==objIndex}}" class='showName'>
+                        展示名称是的洛杉矶开始剧烈的就是立刻就打死了肯德基 
+                    </view>
+                    <view wx:if="{{typeItem=='strC'&&typeIndex==objIndex}}" class='product-description'>
+                        产品描述:<text style='color:#D2D2D2;'>这是一个新开发的产品</text>
+                        
+                    </view>
+                    <view wx:if="{{typeItem=='image'&&typeIndex==objIndex}}" class='product-description' style='border:0;'>
+                        <view style='margin-bottom:24rpx;'>展示图片</view>
+                        <image src='{{imageUrl}}' style='width:670rpx;margin-bottom:-20rpx;;' mode="widthFix"></image>
+                    </view>
+                    <view wx:if="{{typeItem=='text'&&typeIndex==objIndex}}" class='image-description'>
+                        "旨在为人们带来更多营养与浓醇享受。
+                        而相比其它高端常温酸奶，伊利“安慕希”也具有..."
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='operation-wrap'>
+            <view style='margin-right:30rpx;align-item:center;display:flex;'>
+                <image src='../../api/lib/images/edit.png' class='edit-image' style=''></image>
+                <text style='color:#5DAEF8;'>编辑 </text>
+            </view>
+            <view style='align-item:center;display:flex;'>
+                <image src='../../api/lib/images/remove.png' class='remove-image'></image>
+                <text>删除 </text>
+            </view>
+        </view>
+    </view>
+    <!--列表没图片时  -->
+    <view wx:if="{{!imageIsShow}}" wx:for="{{list}}" wx:for-item="imageHideListItem" wx:key="" wx:for-index="imageHideListIndex" class='imageHide-wrap'>
+        <!-- 过渡线 -->
+        <view class='line-gray'></view>
+        <view wx:for="{{imageHideListItem}}" wx:for-item="imageHideObjItem" wx:key="" wx:for-index="imageHideObjIndex">
+            <view wx:for="{{typeList}}" wx:for-item="imageHideTypeItem" wx:key="" wx:for-index="imageHideTypeIndex">
+                <view wx:if="{{imageHideTypeItem=='title'&&imageHideTypeIndex==imageHideObjIndex}}" class='imageHide-title'>
+                    管理员名称
+                </view>
+                <view wx:if="{{imageHideTypeItem=='strC'&&imageHideTypeIndex==imageHideObjIndex}}" class='image-small-title'>
+                    职称: <text style='color:#AAAAAA;'>二级</text>
+                </view>
+            </view>
+        </view>
+        <view class='operation-wrap' style='position:absolute;top:58rpx;'>
+            <view style='margin-right:30rpx;align-item:center;display:flex;'>
+                <image src='../../api/lib/images/edit.png' class='edit-image' style=''></image>
+                <text style='color:#5DAEF8;'>编辑 </text>
+            </view>
+            <view style='align-item:center;display:flex;'>
+                <image src='../../api/lib/images/remove.png' class='remove-image'></image>
+                <text>删除 </text>
+            </view>
+        </view>
+    </view>
+    <view class='fill'></view>
+    <button class='add'>添加</button>
+</view>
