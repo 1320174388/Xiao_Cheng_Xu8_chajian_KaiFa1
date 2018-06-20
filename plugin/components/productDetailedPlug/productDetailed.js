@@ -16,13 +16,14 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    obj: wx.getStorageSync("obj"),
+    typeList: wx.getStorageSync("typeList"),
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-
+    
   }
 })

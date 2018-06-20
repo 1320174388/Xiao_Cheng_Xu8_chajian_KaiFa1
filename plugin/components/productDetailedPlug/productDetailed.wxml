@@ -1,40 +1,50 @@
-<view class="content-column wrap">
-  <!-- 产品名称 -->
-  <view style="flex:1" class="wrap-productName">
-    <view class="content-row header-productName">
-       <!-- 产品名称前的实心圆样式 -->
-      <view style="flex:1">
-        <view class='content-circle'></view>
-      </view> 
-      <!--  产品的名称 -->
-      <view style="flex:24">
-        <view class='content-productName'>安慕希</view>
-      </view> 
-    </view> 
-  </view> 
-  <!-- 产品信息-图片以及详细介绍 -->
-  <view style="flex:1" class="wrap-productInfo">
-    <view class="content-column">
-      <!-- 图片名称 -->
-      <view style="flex:1">
-        <view class='content-imgName'>图片名称</view>  
+<view class="content-column wrap"> 
+  <view wx:for="{{obj}}" wx:for-item="listItem" wx:key="" wx:for-index="listIndex">
+    <view wx:for="{{typeList}}" wx:for-item="typeItem" wx:key="" wx:for-index="typeIndex">
+      <!-- 产品名称 -->
+      <view wx:if="{{typeItem=='title'&&typeIndex==listIndex}}" style="flex:1" class="wrap-productName">
+        <view class="content-row header-productName">
+          <!-- 产品名称前的实心圆样式 -->
+          <view style="flex:1">
+            <view class='content-circle'></view>
+          </view> 
+          <!--  产品的名称 -->
+          <view style="flex:24">
+            <view class='content-productName'>
+            安慕希</view>
+          </view> 
+        </view> 
       </view>
-      <!-- 产品图片 -->
-      <view style="flex:1">
-        <image src='{{imageUrl}}' class='content-imgPicture'></image>  
-      </view> 
+
+      <!-- 产品信息-图片以及详细介绍 -->
+      <view  wx:if="{{typeItem=='image'&&typeIndex==listIndex}}" style="flex:1" class="wrap-productInfo">
+        <view class="content-column">
+          <!-- 图片名称 -->
+          <view style="flex:1">
+            <view class='content-imgName'>图片名称</view>  
+          </view>
+          <!-- 产品图片 -->
+          <view wx:if="{{typeItem=='image'&&typeIndex==listIndex}}" style="flex:1">
+            <image src='{{imageUrl}}' class='content-imgPicture'></image>  
+          </view> 
+        </view> 
+      </view>
+
       <!-- 产品详细介绍 -->
-      <view style="flex:1">
-        <view class='content-productIntriduce'>旨在为人们带来更多营养与浓醇享受。而相比
-其它高端常温酸奶，伊利“安慕希”也具有明显的特色。不仅名字因为高端大气，来源于希腊的“Ambrosial”，更添加了希腊雅典农业大学最新研制的菌种，具有浓郁的口感和更多的蛋白质，比普通酸奶高出蛋白质35%，最长保质期六个月。</view>  
-      </view>  
-    </view> 
-  </view> 
-</view> 
+      <view wx:if="{{typeItem=='text'&&typeIndex==listIndex}}" style="flex:1">
+        <view wx:if="{{typeItem=='text'&&typeIndex==listIndex}}" class='content-productIntriduce'>
+          旨在为人们带来更多营养与浓醇享受。而相比其它高端常温酸奶，伊利“安慕希”也具有明显的特色。不仅名字因为高端
+          大气，来源于希腊的“Ambrosial”，更添加了希腊雅典农业大学最新研制的菌种，具有浓郁的口感和更多的蛋白质，比
+          普通酸奶高出蛋白质35%，最长保质期六个月。
+        </view>  
+      </view> 
+    </view>
+  </view>
+</view>  
 <!--地老天荒的logo和电话  -->
 <view class='dlth'>
   <image src='{{logoImageUrl}}' class='dlth_logo'  mode="widthFix"></image>
   <view>
     联系电话\t:\t<text>010-86220269</text>
   </view>
-</view>
+</view> 

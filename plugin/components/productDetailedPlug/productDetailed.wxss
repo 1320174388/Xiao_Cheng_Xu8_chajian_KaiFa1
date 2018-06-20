@@ -59,6 +59,8 @@ page{
 	font-Size: 32rpx;
 	color: #aaaaaa;
   padding-bottom: 26rpx;
+  width: 88%;
+  margin-left: 44rpx;
 }
 /*地老天荒售后电话  */
 .dlth{
@@ -72,5 +74,4 @@ page{
 .dlth_logo{
   width: 400rpx;
   margin-bottom: 10rpx;
-  border: 1rpx solid red;
 }

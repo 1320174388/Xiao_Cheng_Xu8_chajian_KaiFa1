@@ -9,20 +9,23 @@ Component({
             value: [{
                 a: '123',
                 c: "strChang",
-
                 e: "textarea",
                 b: "img",
-                d: "textarea"
+                d: "textarea",
+                f: "textarea"
             }, {
                 a: '456',
                 c: "strChang",
                 b: "img",
+                g: "img",
                 d: "textarea",
-                e: "textarea"
+                e: "textarea",
+                f: "textarea"
             }, {
                 a: '789',
                 c: "strChang",
                 b: "img",
+                g: "img",
                 d: "textarea",
                 e: "textarea"
             }]
@@ -34,7 +37,7 @@ Component({
                 c: "strC",
                 e: "strC",
                 b: "image",
-                d: "text"
+                d: "text",
             }
         },
         imageIsShow: {
