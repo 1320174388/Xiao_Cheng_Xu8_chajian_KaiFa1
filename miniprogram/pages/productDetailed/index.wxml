@@ -1,1 +1,1 @@
-<productDetailed />
+<productDetailed imageUrl="{{imgUrl}}" logoImageUrl="{{logoImgUrl}}"/>
