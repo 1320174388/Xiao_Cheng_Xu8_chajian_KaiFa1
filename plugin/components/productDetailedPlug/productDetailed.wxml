@@ -21,7 +21,7 @@
       </view>
       <!-- 产品图片 -->
       <view style="flex:1">
-        <image src='' class='content-imgPicture'></image>  
+        <image src='{{imageUrl}}' class='content-imgPicture'></image>  
       </view> 
       <!-- 产品详细介绍 -->
       <view style="flex:1">
@@ -32,8 +32,8 @@
   </view> 
 </view> 
 <!--地老天荒的logo和电话  -->
-<view class='dlth' bindtap='phone_dlth'>
-  <image  class='dlth_logo'  mode="widthFix"></image>
+<view class='dlth'>
+  <image src='{{logoImageUrl}}' class='dlth_logo'  mode="widthFix"></image>
   <view>
     联系电话\t:\t<text>010-86220269</text>
   </view>

@@ -1,18 +1,20 @@
 // pages/productDetailed/index.js
+var plugin = requirePlugin("myPlugin")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    imgUrl: "../../api/lib/images/indexPlugList-img.png",
+    logoImgUrl:"../../api/lib/images/gslogo_1x.png"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    plugin.getData()
   },
 
   /**
