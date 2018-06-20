@@ -39,7 +39,7 @@ Component({
         },
         imageIsShow: {
             type: Boolean,
-            value: false,
+            value: true,
         },
         imageUrl: {
             type: String,
@@ -57,6 +57,13 @@ Component({
      * 组件的方法列表
      */
     methods: {
-
+        jumpDetail:function(res){
+            var index = res.currentTarget.id;
+            var obj = this.data.list[index];
+            console.log(obj);
+            wx.setStorageSync("obj", obj);
+            wx.setStorageSync("typeList", this.data.typeList);
+            this.triggerEvent("clickDetail");
+        }
     }
 })

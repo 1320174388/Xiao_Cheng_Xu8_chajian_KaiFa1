@@ -5,5 +5,10 @@ Page({
     },
   onLoad: function() {
     plugin.getData()
+  },
+  jumpDetail:function(){
+      wx.navigateTo({
+          url: '../productDetailed/index'
+      })
   }
 })

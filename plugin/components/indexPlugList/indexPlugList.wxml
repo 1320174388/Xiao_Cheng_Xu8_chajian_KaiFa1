@@ -5,7 +5,7 @@
         <!--过渡线  -->
         <view class='line-gray'></view>
         <!--详情点  -->
-        <view class='detail'>...</view>
+        <view class='detail' bindtap='jumpDetail' id='{{listIndex}}'>...</view>
         <!--正文内容  -->
         <view class='list-content-wrap'>
             <view wx:for="{{listItem}}" wx:for-item="objItem" wx:key="" wx:for-index="objIndex">
