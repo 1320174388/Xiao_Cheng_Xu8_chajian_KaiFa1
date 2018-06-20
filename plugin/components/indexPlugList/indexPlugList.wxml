@@ -11,10 +11,11 @@
             <view wx:for="{{listItem}}" wx:for-item="objItem" wx:key="" wx:for-index="objIndex">
                 <view wx:for="{{typeList}}" wx:for-item="typeItem" wx:key="" wx:for-index="typeIndex">
                     <view wx:if="{{typeItem=='title'&&typeIndex==objIndex}}" class='showName'>
-                        展示名称是的洛杉矶开始剧烈的就是立刻就打死了肯德基 
+                        展示名称 
                     </view>
+                    <view wx:if="{{typeItem=='title'&&typeIndex==objIndex}}" style='height:1px;width:100%;background:#EFEFEF;'></view>
                     <view wx:if="{{typeItem=='strC'&&typeIndex==objIndex}}" class='product-description'>
-                        产品描述:<text style='color:#D2D2D2;'>这是一个新开发的产品</text>
+                        产品描述\t:\t<text style='color:#D2D2D2;'>这是一个新开发的产品</text>
                         
                     </view>
                     <view wx:if="{{typeItem=='image'&&typeIndex==objIndex}}" class='product-description' style='border:0;'>
