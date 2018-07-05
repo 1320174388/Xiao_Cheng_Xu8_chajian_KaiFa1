@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "productDetailed": "plugin://myPlugin/productDetailed"
+    "productDetailed": "plugin://myPlugin/list_plugin_v1_detail"
   },
   "navigationBarBackgroundColor": "#ffffff",
   "navigationBarTextStyle": "black",

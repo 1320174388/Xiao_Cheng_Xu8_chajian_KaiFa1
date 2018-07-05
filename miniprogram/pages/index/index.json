@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "indexPlugList":"plugin://myPlugin/indexPlugList"
+    "indexPlugList":"plugin://myPlugin/list_plugin_v1_index"
   }
 }

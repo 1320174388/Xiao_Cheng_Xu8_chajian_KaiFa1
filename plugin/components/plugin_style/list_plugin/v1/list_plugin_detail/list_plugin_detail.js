@@ -1,23 +1,20 @@
 // plugin/components/productDetailedPlug/productDetailed.js
+// 列表插件详情页面js文件
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    imageUrl: {
-      type: String,
-    },
-    logoImageUrl: {
-      type: String,
-    }
+    
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    obj: wx.getStorageSync("obj"),
+    listObj: wx.getStorageSync("listObj"),
     typeList: wx.getStorageSync("typeList"),
+    listTitle: wx.getStorageSync("listTitle")
   },
 
   /**

@@ -3,6 +3,10 @@
 	"pluginRoot": "./plugin",
 	"compileType": "plugin",
 	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
 		"newFeature": true
 	},
 	"appid": "wx63442a92b35ad4ed",

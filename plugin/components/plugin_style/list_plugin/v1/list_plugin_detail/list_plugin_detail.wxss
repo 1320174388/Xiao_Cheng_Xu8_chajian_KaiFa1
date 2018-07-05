@@ -1,3 +1,4 @@
+/*列表插件详情页面样式  */
 page{
   background-color: #fff;
 }
@@ -33,6 +34,7 @@ page{
   font-Family: "PingFangSC-Regular";
 	font-Size: 32rpx;
 	color: #4b4b4b;
+    font-weight: bold;
 }
 /* 产品信息-图片以及详细介绍 */
 .wrap-productInfo{
@@ -68,10 +70,10 @@ page{
   text-align: center;
   color: #ccc;
   font-size: 30rpx;
-  padding: 10rpx 0 20rpx 0;
+  padding: 20rpx 0 20rpx 0;
   margin-top: 88rpx;
 }
 .dlth_logo{
   width: 400rpx;
-  margin-bottom: 10rpx;
+  margin: 10rpx;
 }

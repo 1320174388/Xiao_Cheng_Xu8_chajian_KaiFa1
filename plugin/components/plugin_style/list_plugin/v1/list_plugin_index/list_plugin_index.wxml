@@ -1,0 +1,114 @@
+<!-- 版权声明 :  地老天荒科技有限公司
+     文件名称 :  list_plugin_index.wxml
+     创 建 者 :  Cheng Tao
+     创建日期 :  2018/06/22 20:38
+     文件描述 :  列表组件首页js文件
+     历史记录 :  ----------------------- 
+-->
+<view class='wrap'>
+    <!--列表有图片时  -->
+    <view wx:if="{{imageIsShow}}" class='image-show-wrap'  wx:for="{{list}}" wx:for-item="listItem" wx:key="" wx:for-index="listIndex">
+        <!--过渡线  -->
+        <view class='line-gray'></view>
+        <!--正文内容  -->
+        <view class='list-content-wrap'>
+        <!--循环数组中各个对象的类别  -->
+        <view wx:for="{{typeList}}" wx:for-item="typeItem" wx:key="" wx:for-index="typeIndex">
+            <!--循环数组中的对象  -->
+            <view wx:for="{{listItem}}" wx:for-item="objItem" wx:key="" wx:for-index="objIndex">
+                    <!--详情点  -->
+                    <view wx:if="{{typeItem=='title'&&typeIndex==objIndex}}" class='detail' bindtap='jumpDetail' id='{{listIndex}}'>...</view>
+                    <!--展示名称title  -->
+                    <view wx:if="{{typeItem=='title'&&typeIndex==objIndex}}" class='showName'>
+                        {{objItem}}
+                    </view>
+                    <!--展示名称下边框线  -->
+                    <view wx:if="{{typeItem=='title'&&typeIndex==objIndex}}" style='height:1px;width:100%;background:#EFEFEF;'></view>
+                    <!--产品描述部分  -->
+                    <view wx:if="{{typeItem=='textShort'&&typeIndex==objIndex}}" class='product-description'>
+                        <text>{{listTitle[typeIndex]}}</text>\t:\t<text style='color:#D2D2D2;'>{{objItem}}</text>
+                        
+                    </view>
+                    <!--展示图片部分  -->
+                    <view wx:if="{{typeItem=='image'&&typeIndex==objIndex}}" class='product-description' style='border:0;'>
+                        <!--展示图片文字  -->
+                        <view wx:if="{{listTitle[typeIndex]}}" style='margin-bottom:24rpx;'>{{listTitle[typeIndex]}}</view>
+                        <!--图片  -->
+                        <image wx:if="{{typeItem=='image'&&typeIndex==objIndex}}" src='{{host+objItem}}' style='width:670rpx;' mode="widthFix"></image>
+                        
+                    </view>
+                    <!--多张图片部分  -->
+                    <scroll-view wx:if="{{typeItem=='imageArray'&&typeIndex==objIndex}}" style='width:670rpx;height:500rpx;margin:0 auto 20rpx;overflow:hidden;white-space:nowrap;background:#ccc;' scroll-x>
+                        <view wx:for="{{objItem}}" wx:key="" wx:for-item="imageItem" style='display:inline-block;width:100%;text-align:center;'>
+                            <image src='{{host+imageItem}}' mode="aspectFit"></image>
+                        </view>
+                    </scroll-view>
+                    <!--一些较长的文本信息  -->
+                    <view wx:if="{{typeItem=='textLong'&&typeIndex==objIndex}}" class='image-description'>
+                        {{objItem}}
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!--编辑和删除按钮  -->
+        <view class='operation-wrap'>
+            <!--编辑部分  -->
+            <view style='margin-right:30rpx;align-item:center;display:flex;'>
+                <image src='../../../../../api/plugin_static/image/edit.png' class='edit-image' style=''></image>
+                <text style='color:#5DAEF8;'>编辑 </text>
+            </view>
+            <!-- 删除部分 -->
+            <view style='align-item:center;display:flex;'>
+                <image src='../../../../../api/plugin_static/image/remove.png' class='remove-image'></image>
+                <text>删除 </text>
+            </view>
+        </view>
+    </view>
+    <!--列表没图片时  -->
+    <view wx:if="{{!imageIsShow}}" wx:for="{{list}}" wx:for-item="imageHideListItem" wx:key="" wx:for-index="imageHideListIndex" class='imageHide-wrap'>
+        <!-- 过渡线 -->
+        <view class='line-gray'></view>
+        <!-- 对象类型循环 -->
+        <view wx:for="{{typeList}}" wx:for-item="imageHideTypeItem" wx:key="" wx:for-index="imageHideTypeIndex">
+            <!-- 单个对象循环 -->
+            <view wx:for="{{imageHideListItem}}" wx:for-item="imageHideObjItem" wx:key="" wx:for-index="imageHideObjIndex">
+                <!-- 要展示的标题 -->
+                <view wx:if="{{imageHideTypeItem=='title'&&imageHideTypeIndex==imageHideObjIndex}}" class='imageHide-title'>
+                    {{imageHideObjItem}}
+                </view>
+                <!--要展示的较短的文字信息  -->
+                <view wx:if="{{imageHideTypeItem=='textShort'&&imageHideTypeIndex==imageHideObjIndex}}" class='image-small-title'>
+                    <text>{{listTitle[imageHideTypeIndex]}}</text>\t:\t<text style='color:#AAAAAA;'>{{imageHideObjItem}}</text>
+                </view>
+                <!-- 要展示的较长的文字信息 -->
+                <view wx:if="{{imageHideTypeItem=='textLong'&&imageHideTypeIndex==imageHideObjIndex}}" class='image-small-title'>
+                    <text>{{listTitle[imageHideTypeIndex]}}</text>\t:\t<text style='color:#AAAAAA;'>{{imageHideObjItem}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- 编辑和删除按钮 -->
+        <view class='operation-wrap' style='position:absolute;top:58rpx;'>
+            <!-- 编辑部分 -->
+            <view style='margin-right:30rpx;align-item:center;display:flex;'>
+                <image src='../../../../../api/plugin_static/image/edit.png' class='edit-image' style=''></image>
+                <text style='color:#5DAEF8;'>编辑 </text>
+            </view>
+            <!-- 删除部分 -->
+            <view style='align-item:center;display:flex;'>
+                <image src='../../../../../api/plugin_static/image/remove.png' class='remove-image'></image>
+                <text>删除 </text>
+            </view>
+        </view>
+    </view>
+    <!--地老天荒的logo和电话  -->
+    <view class='dlth' bindtap='phoneCall'>
+        <image src='../../../../../api/plugin_static/image/gslogo_1x.png' class='dlth_logo'  mode="widthFix"></image>
+        <view>
+          售后电话\t:\t<text>010-86220269</text>
+        </view>
+    </view>
+    <!-- 添加按钮部分填充 -->
+    <view class='fill'></view>
+    <!-- 添加按钮 -->
+    <button class='add'>添加</button>
+</view>

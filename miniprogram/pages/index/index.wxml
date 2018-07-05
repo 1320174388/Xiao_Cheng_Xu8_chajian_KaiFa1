@@ -1,1 +1,1 @@
-<indexPlugList imageUrl="{{imgUrl}}" bind:clickDetail="jumpDetail"/>
+<indexPlugList list="{{list}}" typeList = "{{typeList}}" listTitle="{{listTitle}}" imageIsShow="{{true}}" host="{{host}}" bind:clickDetail="jumpDetail"/>

@@ -1,4 +1,4 @@
-var data = require('./api/data.js')
+var data = require('./api/plugin_style/list_plugin_assembly.js')
 
 module.exports = {
   getData: data.getData,

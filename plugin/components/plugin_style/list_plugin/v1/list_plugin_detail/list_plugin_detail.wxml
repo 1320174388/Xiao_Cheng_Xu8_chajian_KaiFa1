@@ -1,0 +1,59 @@
+<!--列表插件详情页面  -->
+<view class="content-column wrap"> 
+  <view wx:for="{{listObj}}" wx:for-item="listItem" wx:key="" wx:for-index="listIndex">
+    <view wx:for="{{typeList}}" wx:for-item="typeItem" wx:key="" wx:for-index="typeIndex">
+      <!-- 产品名称 -->
+      <view wx:if="{{typeItem=='title'&&typeIndex==listIndex}}" style="flex:1" class="wrap-productName">
+        <view class="content-row header-productName">
+          <!-- 产品名称前的实心圆样式 -->
+          <view style="flex:1">
+            <view class='content-circle'></view>
+          </view> 
+          <!--  产品的名称 -->
+          <view style="flex:24">
+            <view class='content-productName'>
+            {{listItem}}</view>
+          </view> 
+        </view> 
+      </view>
+      <!-- 要展示的较短的文字信息 -->
+      <view wx:if="{{typeItem=='textShort'&&typeIndex==listIndex}}" style='padding:20rpx 44rpx 0;font-size:32rpx;'>
+        <text>{{listTitle[typeIndex]}}</text>
+        \t:\t
+        <text style='color:#AAAAAA;'>{{listItem}}</text>
+      </view>
+      <!-- 产品信息-图片以及详细介绍 -->
+      <view  wx:if="{{typeItem=='image'&&typeIndex==listIndex}}" style="flex:1" class="wrap-productInfo">
+        <view class="content-column">
+          <!-- 图片名称 -->
+          <view style="flex:1">
+            <view wx:if="{{listTitle[typeIndex]}}" class='content-imgName'>{{listTitle[typeIndex]}}</view>  
+          </view>
+          <!-- 产品图片 -->
+          <view style="flex:1">
+            <image src='{{listItem}}' class='content-imgPicture'></image>  
+          </view> 
+        </view> 
+      </view>
+      <!--多张图片部分  -->
+      <scroll-view wx:if="{{typeItem=='imageArray'&&typeIndex==listIndex}}" style='width:670rpx;height:500rpx;margin:0 auto 20rpx;overflow:hidden;white-space:nowrap;background:#ccc;' scroll-x>
+        <view wx:for="{{listItem}}" wx:key="" wx:for-item="imageItem" style='display:inline-block;width:100%;text-align:center;'>
+            <image src='{{imageItem}}' mode="aspectFit"></image>
+        </view>
+       </scroll-view>
+      <!-- 产品详细介绍 -->
+      <view wx:if="{{typeItem=='textLong'&&typeIndex==listIndex}}" style="flex:1">
+        <view class='content-productIntriduce'>
+          {{listItem}}
+        </view>  
+      </view> 
+    </view>
+  </view>
+</view>  
+<!--地老天荒的logo和电话  -->
+<view class='dlth'>
+  <image src='../../../../../api/plugin_static/image/gslogo_1x.png' class='dlth_logo'  mode="widthFix"></image>
+  <view>
+    联系电话\t:\t<text>010-86220269</text>
+  </view>
+</view> 
