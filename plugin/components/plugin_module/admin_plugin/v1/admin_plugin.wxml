@@ -8,8 +8,7 @@
 <view>
     <view class='header'>
         <text style="font-size:30rpx;align-item:center;">今日</text>\t
-        <text style='color:#a8abb6;'>2月26日</text>\t
-        <text style='color:#a8abb6;'>星期一</text>
+        <text style='color:#a8abb6;'>{{time}}</text>
     </view>
     <view style='border:1px solid #142143;'></view>
     <view class='wrap'>

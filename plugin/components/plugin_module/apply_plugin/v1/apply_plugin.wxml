@@ -8,8 +8,7 @@
 <view>
     <view class='header'>
         <text style="font-size:30rpx;align-item:center;">今日</text>\t
-        <text style='color:#a8abb6;'>2月26日</text>\t
-        <text style='color:#a8abb6;'>星期一</text>
+        <text style='color:#a8abb6;'>{{time}}</text>
     </view>
     <view style='border:1px solid #142143;'></view>
     <view class='wrap'>
@@ -25,10 +24,10 @@
             <view style='border:1px solid #3f4a67;'></view>
             <view class='input-wrap'>
                 <image class='phone-icon' src='../../../../api/plugin_static/image/apply_plugin_v1_phone_icon.svg'></image>
-                <input class='inp' placeholder='请输入电话号码'></input>
+                <input class='inp' placeholder='请输入电话号码' ></input>
             </view>
             <view style='border:1px solid #3f4a67;'></view>
-            <button class='sub-btn'>提交</button>
+            <button class='sub-btn' bindtap='timeh'>提交</button>
         </view>
     </view>
 </view>

@@ -6,6 +6,12 @@
  *  文件描述 :  后台首页js文件
  *  历史记录 :  -----------------------
  */
+var time = new Date();
+var M = time.getMonth() + 1;
+var D = time.getDate();
+var X = time.getDay();
+var week = ["日", "一", "二", "三", "四", "五", "六"]
+var strTime = M + '月' + D + '日'+' 星期'+week[X];
 Component({
   /**
    * 组件的属性列表
@@ -24,7 +30,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+      time: strTime,
+      
   },
 
   /**

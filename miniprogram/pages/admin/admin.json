@@ -1,5 +1,6 @@
 {
     "usingComponents": {
-        "apply": "plugin://myPlugin/apply_plugin_v1"
+        "apply": "plugin://myPlugin/apply_plugin_v1",
+        "admin": "plugin://myPlugin/admin_plugin_v1"
     }
 }
