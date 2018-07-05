@@ -2,13 +2,23 @@
      文件名称 :  admin_plugin.wxml
      创 建 者 :  Cheng Tao
      创建日期 :  2018/07/05 11:52
-     文件描述 :  后台首页js文件
+     文件描述 :  后台首页wxml文件
      历史记录 :  ----------------------- 
 -->
 <view>
     <view class='header'>
-        <text style="color:#fff;font-size:30rpx;">今日</text>\t \t
-        <text>2月26日</text>\t \t
-        <text>星期一</text>
+        <text style="font-size:30rpx;align-item:center;">今日</text>\t
+        <text style='color:#a8abb6;'>2月26日</text>\t
+        <text style='color:#a8abb6;'>星期一</text>
+    </view>
+    <view style='border:1px solid #142143;'></view>
+    <view class='wrap'>
+        <view wx:for="{{listTitle}}" wx:key="index" class='item-wrap'>
+            <text style='font-size:32rpx;'>{{item}}</text>
+            <view class='setting'>设置>></view>
+            <view class='text-long-wrap'>
+                    权限管理模块，设置整个项目的后台管理员，对管理员的权限，职位，做设置，一个职位多个权限，一个管理员可以有多个职位。 
+            </view>
+        </view>
     </view>
 </view>

@@ -1,0 +1,82 @@
+/**
+ *  版权声明 :  地老天荒科技有限公司
+ *  文件名称 :  admin_plugin.wxss
+ *  创 建 者 :  Cheng Tao
+ *  创建日期 :  2018/07/05 15:58
+ *  文件描述 :  后台首页wxss文件
+ *  历史记录 :  -----------------------
+ */
+ page{
+     background: #262d49;
+     color: #fff;
+ }
+ view{
+     box-sizing: border-box;
+ }
+ .header{
+    height: 88rpx;
+    text-align: center;
+    line-height: 88rpx;
+    font-size: 24rpx;
+ }
+ .wrap{
+     padding: 0 87rpx;
+ }
+ .shenqing{
+     text-align: center;
+     height: 130rpx;
+     line-height: 130rpx;
+     font-size: 37rpx;
+ }
+ .form-wrap{
+     margin-top: 17rpx;
+     height: 600rpx;
+     background: #2d3958;
+     position: relative;
+     padding: 137rpx 68rpx 0 68rpx;
+     
+ }
+ .top-icon-wrap{
+     width: 122rpx;
+     height: 122rpx;
+     border-radius: 50%;
+     position: absolute;
+     left: 39%;
+     top: -37rpx;
+     background: #262d49;
+ }
+ .top-icon{
+     width: 77rpx;
+     height: 77rpx;
+     margin: 22rpx;
+ }
+ .input-wrap{
+     height: 90rpx;
+     width: 440rpx;
+     display: flex;
+ }
+ .name-icon{
+     width: 27rpx;
+     height: 25rpx;
+     margin: 40rpx 19rpx 0 14rpx;
+ }
+ .phone-icon{
+     width: 21rpx;
+     height: 31rpx;
+     margin: 36rpx 19rpx 0 14rpx;
+ }
+ .inp{
+     width: 380rpx;
+     font-size: 28rpx;
+     color: #fff;
+     margin-top: 26rpx;
+ }
+ .sub-btn{
+     width: 352rpx;
+     height: 80rpx;
+     background: #262d49;
+     color: #fff;
+     margin-top: 159rpx;
+     line-height: 80rpx;
+     font-size: 32rpx;
+ }

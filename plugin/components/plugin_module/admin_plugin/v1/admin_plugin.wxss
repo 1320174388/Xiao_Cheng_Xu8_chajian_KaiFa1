@@ -7,8 +7,11 @@
  *  历史记录 :  -----------------------
  */
  page{
-     background: #263d49;
-     color: #a8abb6;
+     background: #262d49;
+     color: #fff;
+ }
+ view{
+     box-sizing: border-box;
  }
  .header{
     height: 88rpx;
@@ -16,3 +19,28 @@
     line-height: 88rpx;
     font-size: 24rpx;
  }
+ .wrap{
+     padding: 55rpx 40rpx 0 40rpx;
+ }
+ .item-wrap{
+     background: #2d3958;
+     padding: 14rpx 17rpx 20rpx 29rpx;
+     margin-bottom: 60rpx;
+ }
+ .setting{
+     color:#798092;
+     float: right;
+     font-size: 24rpx;
+     line-height: 60rpx;
+ }
+ .text-long-wrap{
+     font-size: 24rpx;
+     margin-top: 10rpx;
+     display: -webkit-box ;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     word-break: break-all;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp:3;
+ }
+ 
