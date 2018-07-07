@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "admin": "plugin://myPlugin/admin_plugin_v1",
+    "admin_vvv": "plugin://myPlugin/admin_plugin_v3"
+  }
+}

@@ -1,8 +1,13 @@
 {
   "publicComponents": {
-    "list_plugin_v1_index":"components/plugin_style/list_plugin/v1/list_plugin_index/list_plugin_index",
-    "list_plugin_v1_detail": "components/plugin_style/list_plugin/v1/list_plugin_detail/list_plugin_detail",
-    "admin_plugin_v1":"components/plugin_module/admin_plugin/v1/admin_plugin"
+    "list_plugin_v1_index":
+      "components/plugin_style/list_plugin/v1/list_plugin_index/list_plugin_index",
+    "list_plugin_v1_detail":
+      "components/plugin_style/list_plugin/v1/list_plugin_detail/list_plugin_detail",
+    "admin_plugin_v1":
+      "components/plugin_module/admin_plugin/v1/admin_plugin",
+      "admin_plugin_v3":
+        "components/plugin_module/right_plugin/v3/right_plugin"
   },
   "main": "index.js"
 }
