@@ -1,1 +1,438 @@
-/* plugin/components/plugin_module/right_plugin/v3/right_plugin.wxss */
+/* 最外围 */
+.wrap{
+  border-top: 1rpx solid #00163e;
+}
+/* flex布局 */
+.content-column{
+  display: flex;  
+  flex-direction: column;  
+}
+.content-row{  
+  display: flex;  
+  flex-direction: row;  
+}
+/* 头部导航条 */
+.navTab{
+  margin-top: 26rpx;
+}
+/* 导航条图片文字 */
+.icon{
+  text-align: center;
+}
+/* 职位管理点击样式 */
+.position_Is_checked{
+  color: #fff;
+}
+.nav-position{
+  font-Family: PingFangSC-Medium;
+	font-Size: 22rpx;
+}
+
+/*
+** 职位管理具体内容 
+** 名称
+** 介绍
+** 操作：删除 编辑
+ */
+.positionWrap{
+  margin-top: 76rpx;
+}
+.position{
+   width: 88%;
+   background-color: #2d3958;
+  margin-left: 40rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx;  
+}
+/* 职位管理名称  */
+.position-name-detail{
+  margin-top: 14rpx;
+  margin-left: 29rpx;
+}
+.position-name{
+  font-Family:PingFangSC-Medium;
+	font-Size: 32rpx;
+	color: #ffffff;
+}
+.position-detail{
+  font-Family: PingFangSC-Medium;
+	font-Size: 24rpx;
+	color: #9197a3;
+}
+/* 职位管理描述 */
+.position-describe{
+  font-Family: PingFangSC-Regular;
+	font-Size:24rpx;
+	color: #ffffff;
+  margin-left: 29rpx;
+  width: 555rpx;
+}
+/*  职位管理删除编辑 */
+.position-del-update{
+  margin-right: 14rpx;
+}
+/* 删除编辑没有点击之前的样式 */
+.normal{
+  font-Family: PingFangSC-Medium;
+	font-Size: 24rpx;
+	color: #ffffff;
+  text-align:center;
+  padding-top: 5rpx; 
+  padding-bottom: 7rpx; 
+  margin-bottom: 12rpx;
+}
+/* 删除编辑点击之后的样式  */
+.is_checked{
+  font-Family: PingFangSC-Medium;
+	font-Size: 24rpx;
+	color: #ffffff;
+  background-color: #262d49;
+  border-radius: 5rpx;
+  text-align:center;
+   padding-top: 5rpx; 
+   padding-bottom: 7rpx; 
+  margin-bottom: 12rpx;
+}
+/* 职位管理添加 */
+.position-add{
+  background-Color: #2d3958;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  font-Family: PingFangSC-Medium;
+	font-Size: 32rpx;
+	color: #ffffff;
+  line-height: 100rpx;
+}
+/* 模态框 */ 
+.display_none{  
+    display: none;
+}
+.model{
+  width:100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 3;
+}
+/* 模态框 删除*/
+.model .content{
+  width:402rpx;
+  min-height: 248rpx;
+  background: #262d49;
+  border-radius: 3rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%)
+}
+.content-title{
+  height: 169rpx;
+  text-align: center;
+  line-height: 169rpx;
+}
+.content-title-font{
+  font-Family: PingFangSC-Medium;
+	font-Size: 32rpx;
+	color: #ffffff;
+}
+.content-cancel{
+  height: 76rpx;
+  text-align: center;
+  line-height: 76rpx;
+}
+.content-cancel-font{
+  font-Family: PingFangSC-Medium;
+	font-Size: 32rpx;
+	color: #da5b60;
+}
+.content-affirm-font{
+  font-Family: PingFangSC-Medium;
+	font-Size: 32rpx;
+	color: #fff;
+}
+/* 模态框 详情 */
+.detailContent{
+  width:611rpx;
+  min-height: 251rpx;
+  background: #262d49;
+  border-radius: 3rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%)
+}
+.content-position{
+  margin-left: 32rpx;
+  margin-top: 32rpx;
+}
+.content-name{
+  width: 160rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+}
+.content-name-font{
+  font-Family: PingFangSC-Medium;
+	font-Size: 32rpx;
+	color: #858c9e;
+}
+.content-position-names{
+  width: 140rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.content-position-names-font{
+  font-Family: PingFangSC-Medium;
+	font-Size: 28rpx;
+	color: #ffffff;
+}
+.content-power{
+  margin-left: 32rpx;
+  margin-top: 37rpx;
+}
+.content-power-name{
+  width: 258rpx;
+}
+.content-power-look{
+  width: 112rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.content-look-font{
+  font-Family: PingFangSC-Medium;
+	font-Size: 28rpx;
+	color: #ffffff;
+}
+.content-power-manage{
+  margin-top: 19rpx;
+}
+/* 模态框 添加 */
+.addContent{
+  width:611rpx;
+  min-height: 652rpx;
+  background: #262d49;
+  border-radius: 3rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%)
+}
+.content-add{
+  margin-top: 32rpx;
+}
+.add{
+  margin-left: 31rpx;
+}
+.adds{
+  margin-left: 31rpx;
+  margin-top: 18rpx;
+}
+.conten-input{
+   width: 350rpx; 
+   margin-right: 69rpx; 
+}
+.content-border{
+  margin-top: 15rpx;
+  width: 511rpx;
+  border: 0.01rpx solid rgba(255, 255, 255, 0.18);
+}
+.conten-introduce{
+  margin-top: 29rpx;
+}
+.content-textarea{
+  width: 511rpx;
+  height: 151rpx;
+  border: 0.01rpx solid rgba(255, 255, 255, 0.18);
+  margin-top: 7rpx;
+  font-Size: 28rpx;
+	color: #ffffff;
+  text-indent: 2em;
+  padding-left: 19rpx;
+  padding-right: 21rpx;
+  padding-top: 13rpx;
+}
+.content-power-list{
+  margin-top: 25rpx;
+}
+/* 权限选择点击之前的样式 */
+.Is_normal{
+  width: 50rpx;
+  height: 53rpx;
+  border: 1rpx solid #393f58;
+  font-Family: PingFangSC-Medium;
+	font-Size:28rpx;
+	color: #ffffff;
+  text-align: center;
+   line-height:53rpx; 
+  border-radius: 50rpx;
+  margin-right: 18rpx;
+}
+.Normal{
+  width: 50rpx;
+  height: 53rpx;
+  border: 1rpx solid #393f58;
+  font-Family: PingFangSC-Medium;
+	font-Size:28rpx;
+	color: #ffffff;
+  text-align: center;
+  line-height:53rpx;
+  border-radius: 50rpx;
+}
+.power_normal{
+  width: 160rpx; 
+  height: 53rpx;
+  border: 1rpx solid #393f58;
+  font-Family: PingFangSC-Medium;
+	font-Size:28rpx;
+	color: #ffffff;
+  text-align: center;
+  line-height:53rpx;
+  border-radius: 50rpx;
+}
+/* 权限选择点击之后的样式 */
+.Is_checked{
+  width: 50rpx;
+  height: 53rpx;
+  border: 1rpx solid #f56969;
+  font-Family: PingFangSC-Medium;
+	font-Size:28rpx;
+	color: #f56969;
+  text-align: center;
+  line-height:53rpx; 
+  border-radius: 50rpx;
+  margin-right: 18rpx;
+}
+.Checked{
+  width: 50rpx;
+  height: 53rpx;
+  border: 1rpx solid #f56969;
+  font-Family: PingFangSC-Medium;
+	font-Size:28rpx;
+	color: #f56969;
+  text-align: center;
+  line-height:53rpx;
+  border-radius: 50rpx;
+}
+.power_checked{
+  width: 160rpx; 
+  height: 53rpx;
+  border: 1rpx solid #f56969;
+  font-Family: PingFangSC-Medium;
+	font-Size:28rpx;
+	color: #f56969;
+  text-align: center;
+  line-height:53rpx;
+  border-radius: 50rpx;
+}
+/* 确定取消按钮 */
+.conten-power-cancel-affrim{
+  margin-top: 108rpx;
+}
+.conten-power-cancel{
+  height: 78rpx;
+  text-align: center;
+  line-height: 78rpx;
+  border-right: 1rpx solid rgba(255, 255, 255, 0.18);
+}
+.conten-power-cancel-font{
+  font-Family: PingFangSC-Medium;
+	font-Size: 32rpx;
+	color: #ffffff;
+}
+.conten-power-affrim{
+   height: 78rpx;
+  text-align: center;
+  line-height: 78rpx;
+}
+
+/*
+** 申请管理具体内容 
+** 姓名
+** 时间日期
+** 操作：拒绝 通过
+ */
+.applyWrap{
+  margin-top: 76rpx;
+}
+.apply{
+  width: 88%;
+  background-color: #2d3958;
+  margin-left: 40rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx; 
+ }
+ /* 姓名 操作 */
+.apply-name-operate{
+   margin-top: 14rpx;
+  margin-left: 29rpx;
+ }
+.apply-name{
+  font-Family:PingFangSC-Medium;
+	font-Size: 32rpx;
+	color: #ffffff;
+}
+/* 拒绝 通过 */
+.apply_is_normal{
+  font-Family: PingFangSC-Medium;
+	font-Size: 24rpx;
+	color: #ffffff;
+  text-align:center;
+  padding-top: 5rpx; 
+  padding-bottom: 7rpx; 
+  margin-bottom: 12rpx;
+}
+.apply_is_checked{
+  font-Family: PingFangSC-Medium;
+	font-Size: 24rpx;
+	color: #ffffff;
+  background-color: #262d49;
+  border-radius: 5rpx;
+  text-align:center;
+   padding-top: 5rpx; 
+   padding-bottom: 7rpx; 
+  margin-bottom: 12rpx;
+}
+/* 联系方式 日期 */
+.apply-phone-time{
+  margin-top: 9rpx; 
+  margin-left: 25rpx;
+  margin-bottom:21rpx;
+}
+.apply-phone{
+  font-Family:PingFangSC-Medium;
+	font-Size: 24rpx;
+	color: #ffffff;
+}
+.apply-time{
+  font-Family:PingFangSC-Medium;
+	font-Size: 24rpx;
+	color: rgba(255, 255, 255, 0.18);
+}
+/*
+** 管理员管理具体内容 
+** 姓名
+** 时间日期
+** 操作：删除 编辑
+ */
+.managerWrap{
+  margin-top: 76rpx;
+}
+.managerUpdateContent{
+  width:611rpx;
+  min-height: 549rpx;
+  background: #262d49;
+  border-radius: 3rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%)
+}
+.conten-manager-cancel-affrim{
+  margin-top: 27rpx;
+}
+@import "../../../../api/plugin_static/font/iconfont.wxss";

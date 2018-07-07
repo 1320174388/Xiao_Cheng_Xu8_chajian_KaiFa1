@@ -2,7 +2,8 @@
   "pages": [
       "pages/admin/admin",
     "pages/index/index",
-    "pages/productDetailed/index"
+    "pages/productDetailed/index",
+    "pages/admainV3/index"
   ],
   "plugins": {
     "myPlugin": {

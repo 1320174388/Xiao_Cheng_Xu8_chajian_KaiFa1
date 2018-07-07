@@ -1,2 +1,556 @@
-<!--plugin/components/plugin_module/right_plugin/v3/right_plugin.wxml-->
-<text>plugin/components/plugin_module/right_plugin/v3/right_plugin.wxml</text>
+<!-- 版权声明 :  地老天荒科技有限公司
+     文件名称 :  right_plugin.wxml
+     创 建 者 :  Li Shao Hua
+     创建日期 :  2018/07/05 14:52
+     文件描述 :  后台职位、申请、管理员管理wxml文件
+     历史记录 :  ----------------------- 
+-->
+<!-- 时间下的分割线 -->
+<view class='wrap'>
+  <!-- 选项卡 -->
+  <view class="content-row navTab">
+    <!-- 职位管理 -->
+    <view style="flex:1" class="{{positionIsChecked?'position_Is_checked':'position_Is_normal'}}" bindtap='tabOneClick'>
+      <view class="content-column">
+        <view style="flex:1" class='icon'>
+          <view class="iconfont icon-position"></view>
+        </view> 
+        <view style="flex:1" class='icon icon-font'>
+          <text class='nav-position'>职位管理</text> 
+        </view> 
+      </view> 
+    </view> 
+     <!-- 申请管理 -->
+    <view style="flex:1" class="{{applyIsChecked?'position_Is_checked':'position_Is_normal'}}" bindtap='tabTwoClick'>
+      <view class="content-column">
+        <view style="flex:1" class='icon'>
+          <view class="iconfont icon-apply"></view>
+        </view> 
+        <view style="flex:1" class='icon icon-font'>
+          <text class='nav-position'>申请管理</text>
+        </view> 
+      </view> 
+    </view> 
+    <!-- 管理员管理 -->
+    <view style="flex:1" class="{{managerIsChecked?'position_Is_checked':'position_Is_normal'}}" bindtap='tabThreeClick'>
+     <view class="content-column">
+        <view style="flex:1" class='icon'>
+          <view class="iconfont icon-manage"></view>
+        </view> 
+        <view style="flex:1" class='icon icon-font'>
+          <text class='nav-position'>管理员管理</text>
+        </view> 
+      </view> 
+    </view> 
+  </view> 
+
+<!--职位管理内容-->
+ <view  class="{{tabOne?'display_show':'display_none'}} positionWrap" > 
+  <!-- 一级块显示 -->
+   <view class="content-column" class='position'  wx:for="{{list}}" wx:for-item="listItem" wx:key="" wx:for-index="listIndex">
+    <view style="flex:1"> 
+      <!-- 二级块显示 -->
+       <view class="content-column"> 
+        <!-- 名称、详情 -->
+         <view style="flex:1" class='position-name-detail' wx:for="{{typeList}}" wx:for-item="typeItem" wx:key="" wx:for-index="typeIndex">
+          <view class="content-row" wx:for="{{listItem}}" wx:for-item="objItem" wx:key="" wx:for-index="objIndex"> 
+            <!-- 名称 -->
+              <view style="flex:4.5" class='position-name' wx:if="{{typeItem=='title'&&typeIndex==objIndex}}"> 
+              三级管理员
+            </view> 
+            <!-- 详情 -->
+             <view style="flex:1" class='position-detail' wx:if="{{typeItem=='title'&&typeIndex==objIndex}}" bindtap='detailClick'>
+              详情\t>>
+            </view>  
+          </view>
+        </view> 
+        <!-- 详细介绍 -->
+         <view style="flex:1" class='position-describe'>
+          <view class="content-row">
+            <view style="flex:12">
+              职位描述，三级管理员的各项权限描述，设置整个项目的后台管理员，对管理员的权限，职位，做设置，一个职位多个权限。
+            </view> 
+            <view style="flex:1">
+             
+            </view> 
+          </view> 
+          
+        </view> 
+        <!-- 编辑、删除 -->
+          <view style="flex:8" class="position-del-update">
+          <view class="content-row">
+            <view style="flex:7"></view> 
+            <view style="flex:1.5" 
+            class="{{delIsChecked?'is_checked':'normal'}}" bindtap="delSelection">
+              <text bindtap='delClick'>删除</text> 
+            </view> 
+            <view style="flex:0.5"></view>
+            <view style="flex:1.5" 
+            class="{{updateIsChecked?'is_checked':'normal'}}" bindtap="updateSelection">
+              <text bindtap='updateClick'>编辑</text>
+            </view> 
+          </view>
+        </view>   
+      </view> 
+    </view> 
+  </view>  
+  <view style='height:120rpx;'></view>
+  <button class='position-add' bindtap='addModelClick'>添加</button>
+</view>
+
+<!--申请管理-->
+<view class="{{tabTwo?'display_show':'display_none'}} applyWrap">
+  <!-- 一级显示  -->
+  <view class="content-column apply">
+    <view style="flex:1">
+      <!-- 二级显示 -->
+      <view class="content-column">
+        <!-- 姓名 操作 -->
+        <view style="flex:1" class='apply-name-operate'>
+          <view class="content-row">
+            <!-- 姓名 -->
+            <view style="flex:0.4" class='apply-name'>
+              姓名:
+            </view> 
+            <!-- 具体姓名 -->
+            <view style="flex:1.5" class='apply-name'>
+              长影
+            </view>
+            <!-- 拒绝操作 -->
+            <view style="flex:0.4" class="{{rejectIsChecked?'apply_is_checked':'apply_is_normal'}}" bindtap="rejectSelection">
+              拒绝
+            </view>
+            <view style="flex:0.1"></view>
+            <!-- 通过操作 -->
+            <view style="flex:0.4;margin-right:20rpx" class="{{passIsChecked?'apply_is_checked':'apply_is_normal'}}" bindtap="passSelection">
+              通过
+            </view>
+          </view> 
+        </view>
+        <!-- 联系方式 日期 -->
+        <view style="flex:1" class='apply-phone-time'>
+          <view class="content-row">
+            <!-- 联系方式 -->
+            <view style="flex:0.4" class='apply-phone'>
+              联系方式:
+            </view>
+            <!-- 具体联系方式 -->
+            <view style="flex:0.8" class='apply-phone'>
+              13623457709
+            </view>
+            <!-- 时间日期 -->
+            <view style="flex:1" class='apply-time'>
+              2017年3月23日10：00
+            </view> 
+          </view> 
+        </view>  
+      </view> 
+    </view> 
+  </view> 
+</view>
+ 
+<!--管理员管理-->
+<view class="{{tabThree?'display_show':'display_none'}} managerWrap">
+  <!-- 一级显示  -->
+  <view class="content-column apply">
+    <view style="flex:1">
+      <!-- 二级显示 -->
+      <view class="content-column">
+        <!-- 姓名 操作 -->
+        <view style="flex:1" class='apply-name-operate'>
+          <view class="content-row">
+            <!-- 姓名 -->
+            <view style="flex:0.4" class='apply-name'>
+              姓名:
+            </view> 
+            <!-- 具体姓名 -->
+            <view style="flex:1.5" class='apply-name'>
+              长影
+            </view>
+            <!-- 拒绝操作 -->
+            <view style="flex:0.4" class="{{managerDelIsChecked?'apply_is_checked':'apply_is_normal'}}" bindtap="managerDelSelection">
+              <text bindtap='managerDelClick'>删除</text> 
+            </view>
+            <view style="flex:0.1"></view>
+            <!-- 通过操作 -->
+            <view style="flex:0.4;margin-right:20rpx" class="{{managerUpdateIsChecked?'apply_is_checked':'apply_is_normal'}}" bindtap="managerUpdateSelection">
+              <text bindtap='managerUpdateClick'>编辑</text> 
+            </view>
+          </view> 
+        </view>
+        <!-- 联系方式 日期 -->
+        <view style="flex:1" class='apply-phone-time'>
+          <view class="content-row">
+            <!-- 联系方式 -->
+            <view style="flex:0.4" class='apply-phone'>
+              联系方式:
+            </view>
+            <!-- 具体联系方式 -->
+            <view style="flex:0.8" class='apply-phone'>
+              13623457709
+            </view>
+            <!-- 时间日期 -->
+            <view style="flex:1" class='apply-time'>
+              2017年3月23日10：00
+            </view> 
+          </view> 
+        </view>  
+      </view> 
+    </view> 
+  </view> 
+</view>
+
+</view>
+
+
+<!--模态框：职位管理
+    showModalStatus：删除
+    showModalDetailStatus：详情
+    showModalAddStatus：添加
+    showModalUpdateStatus：编辑
+  -->
+<!-- 职位管理删除模态框 -->
+<view class="{{showModalStatus?'display_show':'display_none'}} model">
+  <view class="content">
+    <view class="content-column">
+    <!-- 删除提示 -->
+      <view style="flex:1" class='content-title'>
+        <text class='content-title-font'>确认删除</text> 
+      </view> 
+      <!-- 取消确认按钮 -->
+      <view style="flex:1;border-top:0.5rpx solid rgba(255, 255, 255, 0.18)">
+        <view class="content-row">
+          <view style="flex:1;border-right:0.5rpx solid rgba(255, 255, 255, 0.18)" class='content-cancel' bindtap='cancelClick'>
+            <text class='content-cancel-font'>取消</text> 
+          </view>
+          <view style="flex:1" class='content-cancel' bindtap='affirmClick'>
+            <text class='content-affirm-font'>确认</text> 
+          </view> 
+        </view> 
+      </view> 
+    </view> 
+  </view> 
+</view>
+
+<!-- 职位管理详情模态框 -->
+<view class="{{showModalDetailStatus?'display_show':'display_none'}} model" bindtap='detailCancelClick'>
+  <view class="detailContent">
+    <view class="content-column">
+      <!-- 职位名称 -->
+      <view style="flex:1" class='content-position'>
+        <view class="content-row">
+          <view style="flex:0.4" class='content-name'>
+            <text class='content-name-font'>职位名称：</text> 
+          </view> 
+          <view style="flex:1" class='content-position-names'>
+            <text class='content-position-names-font'>三级管理员</text> 
+          </view> 
+        </view> 
+      </view>
+      <!-- 拥有权限 -->
+      <view style="flex:1;border:" class='content-power'>
+        <view class="content-row">
+          <view style="flex:0.4" class='content-name'>
+            <text class='content-name-font'>拥有权限：</text> 
+          </view> 
+          <view style="flex:1" class='content-power-name'>
+            <view class="content-column">
+              <view style="flex:1">
+                <view class="content-row">
+                  <view style="flex:0.6" class='content-power-look'>
+                    <text class='content-look-font'>查看门店</text> 
+                  </view> 
+                  <view style="flex:1" class='content-power-look'>
+                    <text class='content-look-font'>信息管理</text> 
+                  </view> 
+                </view> 
+              </view> 
+              <view style="flex:1" class='content-power-manage'>
+                <view class="content-row">
+                  <view style="flex:0.6" class='content-power-look'>
+                    <text class='content-look-font'>信息管理</text> 
+                  </view> 
+                  <view style="flex:1" class='content-power-look'>
+                    <text class='content-look-font'>信息管理</text> 
+                  </view> 
+                </view>
+              </view> 
+            </view> 
+          </view> 
+        </view> 
+      </view>  
+    </view> 
+  </view>
+</view>
+
+<!-- 职位管理添加模态框 -->
+<view class="{{showModalAddStatus?'display_show':'display_none'}} model">
+  <view class="addContent">
+    <view class="content-column content-add">
+      <!-- 职位名称 -->
+      <view style="flex:1">
+        <view class="content-row">
+          <!-- 职位名称 -->
+          <view style="flex:0.4" class="content-name add">
+            <text class='content-name-font'>职位名称：</text>
+          </view> 
+          <!-- 职位名称输入框 -->
+          <view style="flex:0.8" class='conten-input'>
+            <input class='content-position-names-font' />
+          </view> 
+        </view> 
+      </view> 
+      <!-- 分割线 -->
+      <view style="flex:1" class="add">
+        <view class='content-border'></view>
+      </view>
+      <!-- 职位介绍 -->
+      <view style="flex:1" class='conten-introduce content-name add'>
+        <text class='content-name-font'>职位介绍：</text>
+      </view>
+      <!-- 职位介绍输入框 -->
+      <view style="flex:1" class="add">
+        <textarea class='content-textarea'></textarea>
+      </view>
+      <!-- 权限列表 -->
+      <view style="flex:1" class='content-power-list add'>
+        <view class="content-row">
+          <view style="flex:0.3" class="content-name">
+            <text class='content-name-font'>权限列表：</text>
+          </view> 
+          <view style="flex:0.3" class="{{lookAddIsChecked?'Is_checked':'Is_normal'}}" bindtap="lookAddSelection">
+            <text>查看门店</text> 
+          </view> 
+          <view style="flex:0.3" class="{{manageAddIsChecked?'Checked':'Normal'}}" bindtap="manageAddSelection">
+            <text>信息管理</text> 
+          </view>
+        </view> 
+      </view>
+      <!-- 权限管理 -->
+      <view style="flex:1" class="{{powerAddIsChecked?'power_checked':'power_normal'}} adds"
+      bindtap="powerAddSelection">
+        <text>权限管理</text>
+      </view>
+      <!-- 确认删除 -->
+      <view style="flex:1;border-top:1rpx solid rgba(255, 255, 255, 0.18)" class='conten-power-cancel-affrim'>
+        <view class="content-row">
+          <view style="flex:1" class='conten-power-cancel' bindtap='powerCancelClick'>
+            <text class='conten-power-cancel-font'>取消</text> 
+          </view> 
+          <view style="flex:1" class='conten-power-affrim' bindtap='powerAffrimClick'>
+            <text class='conten-power-cancel-font'>确认</text> 
+          </view> 
+        </view> 
+      </view>
+    </view> 
+  </view>
+</view>
+
+<!-- 职位管理编辑模态框 -->
+<view class="{{showModalUpdateStatus?'display_show':'display_none'}} model">
+  <view class="addContent">
+    <view class="content-column content-add">
+      <!-- 职位名称 -->
+      <view style="flex:1">
+        <view class="content-row">
+          <!-- 职位名称 -->
+          <view style="flex:0.4" class="content-name add">
+            <text class='content-name-font'>职位名称：</text>
+          </view> 
+          <!-- 职位名称输入框 -->
+          <view style="flex:0.8" class='conten-input'>
+            <input class='content-position-names-font' value='长影'/>
+          </view> 
+        </view> 
+      </view> 
+      <!-- 分割线 -->
+      <view style="flex:1" class="add">
+        <view class='content-border'></view>
+      </view>
+      <!-- 职位介绍 -->
+      <view style="flex:1" class='conten-introduce content-name add'>
+        <text class='content-name-font'>职位介绍：</text>
+      </view>
+      <!-- 职位介绍输入框 -->
+      <view style="flex:1" class="add">
+        <textarea class='content-textarea'>设置整个项目的后台管理员，对管理员的权限，职位，做设置，一个职位多个权限，一个管理员可以有多个职位。</textarea>
+      </view>
+      <!-- 权限列表 -->
+      <view style="flex:1" class='content-power-list add'>
+        <view class="content-row">
+          <view style="flex:0.3" class="content-name">
+            <text class='content-name-font'>权限列表：</text>
+          </view> 
+          <view style="flex:0.3" class="{{lookUpdateIsChecked?'Is_checked':'Is_normal'}}" bindtap="lookUpdateSelection">
+            <text>查看门店</text> 
+          </view> 
+          <view style="flex:0.3" class="{{manageUpdateIsChecked?'Checked':'Normal'}}" bindtap="manageUpdateSelection">
+            <text>信息管理</text> 
+          </view> 
+        </view> 
+      </view>
+      <!-- 权限管理 -->
+      <view style="flex:1" class="{{powerUpdateIsChecked?'power_checked':'power_normal'}} adds"
+      bindtap="powerUpdateSelection">
+        <text>权限管理</text>
+      </view>
+      <!-- 确认删除 -->
+      <view style="flex:1;border-top:1rpx solid rgba(255, 255, 255, 0.18)" class='conten-power-cancel-affrim'>
+        <view class="content-row">
+          <view style="flex:1" class='conten-power-cancel' bindtap='updatePowerCancelClick'>
+            <text class='conten-power-cancel-font'>取消</text> 
+          </view> 
+          <view style="flex:1" class='conten-power-affrim' bindtap='updatePowerAffrimClick'>
+            <text class='conten-power-cancel-font'>确认</text> 
+          </view> 
+        </view> 
+      </view>
+    </view> 
+  </view>
+</view>
+
+<!--模态框：职位管理
+    showModalStatus：删除
+    showModalDetailStatus：详情
+    showModalAddStatus：添加
+    showModalUpdateStatus：编辑
+  -->
+<!-- 申请管理拒绝通过模态框 -->
+<view class="{{applyshowModalStatus?'display_show':'display_none'}} model">
+  <view class="content">
+    <view class="content-column">
+    <!-- 删除提示 -->
+      <view style="flex:1" class='content-title'>
+        <text class='content-title-font'>确认通过</text> 
+      </view> 
+      <!-- 取消确认按钮 -->
+      <view style="flex:1;border-top:0.5rpx solid rgba(255, 255, 255, 0.18)">
+        <view class="content-row">
+          <view style="flex:1;border-right:0.5rpx solid rgba(255, 255, 255, 0.18)" class='content-cancel' bindtap='applyCancelClick'>
+            <text class='content-cancel-font'>拒绝</text> 
+          </view>
+          <view style="flex:1" class='content-cancel' bindtap='applyAffirmClick'>
+            <text class='content-affirm-font'>通过</text> 
+          </view> 
+        </view> 
+      </view> 
+    </view> 
+  </view> 
+</view>
+
+<!--模态框：管理员管理
+    showModalStatus：删除
+    showModalUpdateStatus：编辑
+  -->
+<!-- 管理员管理删除模态框 -->
+<view class="{{managerShowModalStatus?'display_show':'display_none'}} model">
+  <view class="content">
+    <view class="content-column">
+    <!-- 删除提示 -->
+      <view style="flex:1" class='content-title'>
+        <text class='content-title-font'>确认删除</text> 
+      </view> 
+      <!-- 取消确认按钮 -->
+      <view style="flex:1;border-top:0.5rpx solid rgba(255, 255, 255, 0.18)">
+        <view class="content-row">
+          <view style="flex:1;border-right:0.5rpx solid rgba(255, 255, 255, 0.18)" class='content-cancel' bindtap='managerDelCancelClick'>
+            <text class='content-cancel-font'>取消</text> 
+          </view>
+          <view style="flex:1" class='content-cancel' bindtap='managerUpdateAffirmClick'>
+            <text class='content-affirm-font'>确认</text> 
+          </view> 
+        </view> 
+      </view> 
+    </view> 
+  </view> 
+</view>
+
+<!-- 管理员管理编辑模态框 -->
+<view class="{{managerShowUpdateModalStatus?'display_show':'display_none'}} model">
+  <view class="managerUpdateContent">
+    <view class="content-column">
+      <!-- 名称 -->
+      <view style="flex:1">
+        <view class="content-row content-add">
+          <!-- 管理员名称 -->
+          <view style="flex:0.2" class="content-name add">
+            <text class='content-name-font'>名称：</text>
+          </view> 
+          <!--管理员名称输入框 -->
+          <view style="flex:0.8" class='conten-input'>
+            <input class='content-position-names-font' value='长影'/>
+          </view> 
+        </view> 
+      </view> 
+      <!-- 分割线 -->
+      <view style="flex:1" class="add">
+        <view class='content-border'></view>
+      </view>
+      <!--密码 -->
+      <view style="flex:1">
+        <view class="content-row content-add">
+          <!-- 管理员密码 -->
+          <view style="flex:0.2" class="content-name add">
+            <text class='content-name-font'>密码：</text>
+          </view> 
+          <!--管理员密码输入框 -->
+          <view style="flex:0.8" class='conten-input'>
+            <input class='content-position-names-font' type='password' value='*********'/>
+          </view> 
+        </view> 
+      </view> 
+      <!-- 分割线 -->
+      <view style="flex:1" class="add">
+        <view class='content-border'></view>
+      </view>
+      <!-- 确认密码 -->
+      <view style="flex:1">
+        <view class="content-row content-add">
+          <!-- 管理员确认密码 -->
+          <view style="flex:0.4" class="content-name add">
+            <text class='content-name-font'>确认密码：</text>
+          </view> 
+          <!--管理员确认密码输入框 -->
+          <view style="flex:0.8" class='conten-input'>
+            <input class='content-position-names-font' type='password' value='*********'/>
+          </view> 
+        </view>
+      </view> 
+      <!-- 分割线 -->
+      <view style="flex:1" class="add">
+        <view class='content-border'></view>
+      </view>
+      <!-- 职位列表 -->
+      <view style="flex:1" class='content-power-list add'>
+        <view class="content-row">
+          <view style="flex:0.3" class="content-name">
+            <text class='content-name-font'>权限列表：</text>
+          </view> 
+          <view style="flex:0.3" class="{{threeManagerUpdateIsChecked?'Is_checked':'Is_normal'}}" bindtap="threeManagerSelection">
+            <text>三级管理员</text> 
+          </view> 
+          <view style="flex:0.3" class="{{twoManagerUpdateIsChecked?'Checked':'Normal'}}" bindtap="twoManagerSelection">
+            <text>二级管理员</text> 
+          </view> 
+        </view> 
+      </view> 
+      <!-- 职位列表之二级管理员 -->
+      <view style="flex:1" class="{{oneManagerUpdateIsChecked?'power_checked':'power_normal'}} adds"
+      bindtap="oneManagerSelection">
+        <text>一级管理员</text>
+      </view> 
+      <!-- 取消 确认 -->
+      <view style="flex:1;border-top:1rpx solid rgba(255, 255, 255, 0.18)" class='conten-manager-cancel-affrim'>
+        <view class="content-row">
+          <view style="flex:1" class='conten-power-cancel' bindtap='updateManagerCancelClick'>
+            <text class='conten-power-cancel-font'>取消</text> 
+          </view> 
+          <view style="flex:1" class='conten-power-affrim' bindtap='updateManagerAffrimClick'>
+            <text class='conten-power-cancel-font'>确认</text> 
+          </view> 
+        </view>
+      </view> 
+    </view> 
+  </view>
+</view>
+

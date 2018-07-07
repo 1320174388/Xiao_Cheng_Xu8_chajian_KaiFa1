@@ -7,7 +7,7 @@
  *  历史记录 :  -----------------------
  */
  page{
-     background: #262d49;
+     background: #262c49;
      color: #fff;
  }
  view{

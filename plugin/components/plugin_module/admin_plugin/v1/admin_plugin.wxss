@@ -7,8 +7,8 @@
  *  历史记录 :  -----------------------
  */
  page{
-     background: #262d49;
-     color: #fff;
+     background: #262c49;
+     color: #a8abb6;
  }
  view{
      box-sizing: border-box;

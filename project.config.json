@@ -10,7 +10,7 @@
 		"newFeature": true
 	},
 	"appid": "wx63442a92b35ad4ed",
-	"projectname": "Xiao_Cheng_Xu8_chajian_KaiFa1",
+	"projectname": "Xiao_Cheng_Xu8_chajian_KaiFa11",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -27,6 +27,12 @@
 					"id": -1,
 					"name": "product",
 					"pathName": "pages/productDetailed/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "v3",
+					"pathName": "pages/admainV3/index",
 					"query": ""
 				}
 			]
