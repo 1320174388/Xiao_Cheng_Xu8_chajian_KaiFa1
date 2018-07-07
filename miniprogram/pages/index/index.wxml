@@ -1,1 +1,1 @@
-<indexPlugList list="{{list}}" typeList = "{{typeList}}" listTitle="{{listTitle}}" imageIsShow="{{true}}" host="{{host}}" bind:clickDetail="jumpDetail"/>
+<list_plugin_one_index list="{{list}}" typeList = "{{typeList}}" listTitle="{{listTitle}}" imageIsShow="{{true}}" host="{{host}}" bind:clickDetail="jumpDetail"/>
