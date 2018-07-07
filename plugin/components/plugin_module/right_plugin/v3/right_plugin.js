@@ -1,3 +1,10 @@
+/*   版权声明 :  地老天荒科技有限公司
+     文件名称 :  right_plugin.js
+     创 建 者 :  Li Shao Hua
+     创建日期 :  2018/07/05 14:52
+     文件描述 :  后台职位、申请、管理员管理js文件
+     历史记录 :  ----------------------- 
+*/
 // plugin/components/plugin_module/right_plugin/v3/right_plugin.js
 Component({
   /**
