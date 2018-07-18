@@ -1,5 +1,6 @@
 {
   "pages": [
+      "pages/talk/talk",
       "pages/admin/admin",
     "pages/index/index",
     "pages/productDetailed/index",

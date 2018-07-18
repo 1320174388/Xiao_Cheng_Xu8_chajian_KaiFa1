@@ -1,6 +1,10 @@
 {
     "usingComponents": {
-        "apply_plugin_one": "plugin://myPlugin/apply_plugin_v1",
-        "admin_plugin_one": "plugin://myPlugin/admin_plugin_v1"
+        "apply_plugin_one": 
+        "plugin://myPlugin/apply_plugin_v1",
+        "admin_plugin_one": 
+        "plugin://myPlugin/admin_plugin_v1",
+        "talk_plugin_one_talk":
+        "plugin://myPlugin/talk_plugin_v1_talk"
     }
 }

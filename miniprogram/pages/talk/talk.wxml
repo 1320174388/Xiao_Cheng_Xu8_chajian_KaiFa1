@@ -1,0 +1,2 @@
+<!--pages/talk/talk.wxml-->
+<talk_plugin_one_ask talkImgOthers="{{imgSrc}}"/>

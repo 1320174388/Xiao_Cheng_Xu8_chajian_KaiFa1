@@ -4,7 +4,10 @@
     "list_plugin_v1_detail": "components/plugin_style/list_plugin/v1/list_plugin_detail/list_plugin_detail",
     "admin_plugin_v1":"components/plugin_module/admin_plugin/v1/admin_plugin",
     "apply_plugin_v1": "components/plugin_module/apply_plugin/v1/apply_plugin",
-    "admin_plugin_v3":"components/plugin_module/right_plugin/v3/right_plugin"
+    "admin_plugin_v3":"components/plugin_module/right_plugin/v3/right_plugin",
+    "talk_plugin_v1_talk":"components/plugin_module/talk_plugin/v1/talk_plugin_v1_talk/talk_plugin_v1_talk",
+    "talk_plugin_v1_ask": "components/plugin_module/talk_plugin/v1/talk_plugin_v1_ask/talk_plugin_v1_ask",
+    "talk_plugin_v1_adminManage": "components/plugin_module/talk_plugin/v1/talk_plugin_v1_adminManage/talk_plugin_v1_adminManage"
   },
   "main": "index.js"
 }

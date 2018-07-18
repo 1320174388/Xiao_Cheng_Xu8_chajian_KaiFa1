@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        
+        "talk_plugin_one_ask": "plugin://myPlugin/talk_plugin_v1_ask"
+    }
+}
